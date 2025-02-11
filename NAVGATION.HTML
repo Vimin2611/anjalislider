@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="navigator">
+        <a href="#home" class="home">Home</a>
+        <a href="#" >About Us </a>
+        <a href="#" >Gallery</a>
+        <a href="#" >Contact Us</a>
+
+    </div>
+    <style>
+        body{
+            margin: 0;
+            font-family: fantasy;
+        }
+        .navigator{
+            overflow: hidden;
+            background-color: #150909;
+        }
+        .navigator a{
+            float: left;
+            color: rgb(246, 255, 69);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: underline;
+            font-size: 17px;
+            
+        }
+        .navigator a:hover{
+            background-color: red;
+            color: yellow;
+        }
+        .navigator a.home {
+            background-color: green;
+            color: silver;
+        }
+    </style>
+    <section>
+    <img class="Myhogwarts" src="C:\Users\bhumi\Downloads\griffindor.png" height="500">
+    <img class="Myhogwarts" src="C:\Users\bhumi\Downloads\sythering.1.jpg" height="500">
+    <img class="Myhogwarts" src="C:\Users\bhumi\Downloads\hufflefuff.png" height="500">
+    <img class="Myhogwarts" src="C:\Users\bhumi\Downloads\ravenclaw.jpg" height="500">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("Myhogwarts");
+            for (i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+                
+            }
+            myIndex++;
+            if (myIndex > x.length){myIndex=1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel,5000);
+        }
+    </script>
+</body>
+</html>
